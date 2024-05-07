@@ -53,5 +53,18 @@
         android:id="@+id/afterLoginFragment"
         android:name="com.example.projekt.AfterLoginFragment"
         android:label="fragment_after_login"
-        tools:layout="@layout/fragment_after_login" />
+        tools:layout="@layout/fragment_after_login" >
+        <action
+            android:id="@+id/action_afterLoginFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.projekt.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
+    </fragment>
 </navigation>
