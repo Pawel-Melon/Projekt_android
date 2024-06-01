@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.projekt.HomeFragment"
+        android:name="com.example.projekt.StartFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -51,9 +51,9 @@
     </fragment>
     <fragment
         android:id="@+id/afterLoginFragment"
-        android:name="com.example.projekt.AfterLoginFragment"
+        android:name="com.example.projekt.HomeFragment"
         android:label="fragment_after_login"
-        tools:layout="@layout/fragment_after_login" >
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_afterLoginFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
