@@ -14,6 +14,10 @@
         android:theme="@style/Theme.Projekt"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBY0mpwVZun6ZMmG1Ln3qaQ2RkZtXMKriQ"/>
+
         <activity
             android:name=".ToolbarActivity"
             android:exported="true">
@@ -24,6 +28,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 </manifest>
