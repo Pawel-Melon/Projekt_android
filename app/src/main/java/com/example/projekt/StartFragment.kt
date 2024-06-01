@@ -49,7 +49,7 @@ class StartFragment : Fragment() {
         }
 
         val welcometext = view.findViewById<TextView>(R.id.textView)
-        val url = "http://10.0.2.2:5000/users/maria.wisniewska@example.com"
+        val url = "http://10.0.2.2:5000/users/test"
 
 
         //fetchUserData()
@@ -60,7 +60,8 @@ class StartFragment : Fragment() {
                     val jsonObject = JSONObject(response)
                     val imie = jsonObject.getString("imie")
                     println(imie)
-                    welcometext.text = imie
+                    if(imie=="1"){welcometext.text = "[API online]"}
+
                 } catch (e: Exception) {
                     Log.e("homefragment", "Error parsing JSON: ${e.message}")
                 }

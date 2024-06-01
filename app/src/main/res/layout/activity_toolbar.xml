@@ -20,10 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+
         app:navGraph="@navigation/my_nav" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:backgroundTint="@color/darkred"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
