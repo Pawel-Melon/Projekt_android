@@ -12,7 +12,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:hint="Podaj login"
+        android:hint="Podaj Email"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.108"
         tools:ignore="MissingConstraints" />
-
 
     <EditText
         android:id="@+id/editText"
@@ -53,6 +52,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
+        android:id="@+id/editText3"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Podaj nazwisko"
