@@ -33,8 +33,12 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val button = view.findViewById<Button>(R.id.mapButton)
+        val accountButton = view.findViewById<Button>(R.id.accountButton)
         button.setOnClickListener {
             findNavController().navigate(R.id.action_afterLoginFragment_to_mapFragment)
+        }
+        accountButton.setOnClickListener {
+            findNavController().navigate(R.id.action_afterLoginFragment_to_accountFragment)
         }
 
         welcomeTextView = view.findViewById(R.id.textView)

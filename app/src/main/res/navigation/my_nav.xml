@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.projekt.StartFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_start" >
+        android:label="Bookstore"
+        tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -20,8 +20,8 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.projekt.loginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="Logowanie"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -36,8 +36,8 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.projekt.registerFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        android:label="Rejestracja"
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -52,19 +52,27 @@
     <fragment
         android:id="@+id/afterLoginFragment"
         android:name="com.example.projekt.HomeFragment"
-        android:label="fragment_after_login"
-        tools:layout="@layout/fragment_home" >
+        android:label="MENU"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_afterLoginFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_afterLoginFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.example.projekt.MapFragment"
-        android:label="fragment_map"
-        tools:layout="@layout/fragment_map" >
+        android:label="Map"
+        tools:layout="@layout/fragment_map">
         <action
             android:id="@+id/action_mapFragment_to_afterLoginFragment"
             app:destination="@id/afterLoginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.projekt.AccountFragment"
+        android:label="Moje konto"
+        tools:layout="@layout/fragment_account" />
 </navigation>
