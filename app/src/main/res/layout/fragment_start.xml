@@ -9,16 +9,16 @@
 
     <TextView
         android:id="@+id/WelcmetextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="393dp"
+        android:layout_height="122dp"
         android:text="            Witaj w\nwypożyczalni książek"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintVertical_bias="0.258" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,15 +35,15 @@
 
     <ImageView
         android:id="@+id/exampleImageView"
-        android:layout_width="197dp"
-        android:layout_height="158dp"
-
-        android:layout_marginTop="265dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        android:layout_width="254dp"
+        android:layout_height="207dp"
+        android:src="@drawable/bookstore"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.417" />
 
     <Button
         android:id="@+id/loginButton"
