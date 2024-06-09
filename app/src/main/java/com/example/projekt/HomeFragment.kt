@@ -34,13 +34,16 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val button = view.findViewById<Button>(R.id.mapButton)
         val accountButton = view.findViewById<Button>(R.id.accountButton)
+        val catalogbutton = view.findViewById<Button>(R.id.catalogueButton)
         button.setOnClickListener {
             findNavController().navigate(R.id.action_afterLoginFragment_to_mapFragment)
         }
         accountButton.setOnClickListener {
             findNavController().navigate(R.id.action_afterLoginFragment_to_accountFragment)
         }
-
+        catalogbutton.setOnClickListener {
+            findNavController().navigate(R.id.action_afterLoginFragment_to_catalogFragment)
+        }
         welcomeTextView = view.findViewById(R.id.textView)
         val email = UserSession.email
         if (email != null) {
@@ -61,6 +64,8 @@ class HomeFragment : Fragment() {
             Request.Method.GET, url, null,
             { response ->
                 val imie = response.optString("imie", "Unknown")
+                val u_id = response.optInt("id_uzytkownika", 7)
+                UserSession.uid = u_id
                 welcomeTextView.text = "Witaj, $imie!"
             },
             { error ->
@@ -68,9 +73,11 @@ class HomeFragment : Fragment() {
                 Log.e("afterLoginFragment", "Error fetching user data: $errorMessage")
                 welcomeTextView.text = "Error occurred: $errorMessage"
             }
+
         )
 
         queue.add(jsonObjectRequest)
+
     }
 
 }

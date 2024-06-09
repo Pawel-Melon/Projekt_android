@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_afterLoginFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_afterLoginFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -75,4 +78,25 @@
         android:name="com.example.projekt.AccountFragment"
         android:label="Moje konto"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.projekt.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" >
+        <action
+            android:id="@+id/action_catalogFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
+        <action
+            android:id="@+id/action_catalogFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.projekt.BookDetailFragment"
+        android:label="fragment_book_detail"
+        tools:layout="@layout/fragment_book_detail" >
+        <action
+            android:id="@+id/action_bookDetailFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+    </fragment>
 </navigation>

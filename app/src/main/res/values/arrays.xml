@@ -1,0 +1,7 @@
+<resources>
+    <array name="sort_options">
+        <item>Sort by Title</item>
+        <item>Sort by Category</item>
+        <item>Sort by Year</item>
+    </array>
+</resources>
