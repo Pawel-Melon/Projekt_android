@@ -6,102 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".BookDetailFragment">
 
+
     <TextView
         android:id="@+id/copiesTextView"
         android:layout_width="152dp"
         android:layout_height="33dp"
+        android:layout_marginTop="32dp"
         android:text="Available Copies"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/TextView"
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView" />
 
     <TextView
         android:id="@+id/authorTextView"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="29dp"
         android:text="Author"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <TextView
         android:id="@+id/yearTextView"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:text="Year"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTextView"
-        app:layout_constraintVertical_bias="0.044" />
-
+        app:layout_constraintTop_toBottomOf="@+id/categoryTextView" />
 
     <TextView
         android:id="@+id/TextView"
         android:layout_width="204dp"
         android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:text="Ilość dostępnych kopii:"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/copiesTextView"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView" />
 
     <TextView
         android:id="@+id/categoryTextView"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="24dp"
         android:text="Category"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authorTextView"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintTop_toBottomOf="@+id/authorTextView" />
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="28dp"
         android:text="Title"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/rentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="68dp"
         android:backgroundTint="@color/darkred"
         android:text="Wypożycz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/copiesTextView"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diuna" />
 </androidx.constraintlayout.widget.ConstraintLayout>

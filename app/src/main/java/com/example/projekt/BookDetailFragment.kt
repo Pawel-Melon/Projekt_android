@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -27,6 +28,7 @@ class BookDetailFragment : Fragment() {
     private lateinit var copiesTextView: TextView
     private lateinit var rentButton: Button
     private lateinit var queue: RequestQueue
+    private lateinit var imageView: ImageView
     private var bookId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +53,7 @@ class BookDetailFragment : Fragment() {
         yearTextView = view.findViewById(R.id.yearTextView)
         copiesTextView = view.findViewById(R.id.copiesTextView)
         rentButton = view.findViewById(R.id.rentButton)
+        imageView = view.findViewById(R.id.imageView)
 
         fetchBookDetails(bookId)
 
@@ -78,6 +81,22 @@ class BookDetailFragment : Fragment() {
                 categoryTextView.text ="Kategoria: $category"
                 yearTextView.text = "Rok wydania: $year"
                 copiesTextView.text = copies
+
+                val imageResId = when (bookId) {
+                    1 -> R.drawable.ostatnie_zyczenie
+                    2 -> R.drawable.hobbit
+                    3 -> R.drawable.kodleonarda_da_vinci
+                    4 -> R.drawable.buszujacy_w_zbozu
+                    5 -> R.drawable.przygody_sherlocka_holmesa
+                    6 -> R.drawable.harry_potter_kamien_filozoficzny
+                    7 -> R.drawable.ania_z_zielonego_wzgorza
+                    8 -> R.drawable.wielki_gatsby
+                    9 -> R.drawable.opowiesc_o_dwoch_miastach
+                    10 -> R.drawable.zabic_drozda
+
+                    else -> R.drawable.diuna // Domyślna okładka, jeśli bookId nie jest znane
+                }
+                imageView.setImageResource(imageResId)
             },
             { error ->
                 Log.e("BookDetailFragment", "Error fetching book details: ${error.message}")
