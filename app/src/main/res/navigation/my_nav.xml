@@ -81,8 +81,8 @@
     <fragment
         android:id="@+id/catalogFragment"
         android:name="com.example.projekt.CatalogFragment"
-        android:label="fragment_catalog"
-        tools:layout="@layout/fragment_catalog" >
+        android:label="Katalog Książek"
+        tools:layout="@layout/fragment_catalog">
         <action
             android:id="@+id/action_catalogFragment_to_afterLoginFragment"
             app:destination="@id/afterLoginFragment" />
@@ -93,8 +93,8 @@
     <fragment
         android:id="@+id/bookDetailFragment"
         android:name="com.example.projekt.BookDetailFragment"
-        android:label="fragment_book_detail"
-        tools:layout="@layout/fragment_book_detail" >
+        android:label="Szczegóły"
+        tools:layout="@layout/fragment_book_detail">
         <action
             android:id="@+id/action_bookDetailFragment_to_catalogFragment"
             app:destination="@id/catalogFragment" />

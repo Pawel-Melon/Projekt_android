@@ -1,7 +1,7 @@
 <resources>
     <array name="sort_options">
-        <item>Sort by Title</item>
-        <item>Sort by Category</item>
-        <item>Sort by Year</item>
+        <item>Sortuj po Tytule</item>
+        <item>Sortuj by Kategorii</item>
+        <item>Sortuj by Autorze</item>
     </array>
 </resources>

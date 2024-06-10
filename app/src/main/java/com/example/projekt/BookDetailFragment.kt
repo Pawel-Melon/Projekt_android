@@ -66,11 +66,18 @@ class BookDetailFragment : Fragment() {
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
-                titleTextView.text = response.getString("tytul")
-                authorTextView.text = response.getString("autor")
-                categoryTextView.text = response.getString("kategoria")
-                yearTextView.text = response.getInt("rok_wydania").toString()
-                copiesTextView.text = response.getInt("liczba_dostepnych_kopii").toString()
+                val title = response.getString("tytul")
+                val autor = response.getString("autor")
+                val category = response.getString("kategoria")
+                val year = response.getInt("rok_wydania").toString()
+                val copies = response.getInt("liczba_dostepnych_kopii").toString()
+
+
+                titleTextView.text = "$title"
+                authorTextView.text = "Autor: $autor"
+                categoryTextView.text ="Kategoria: $category"
+                yearTextView.text = "Rok wydania: $year"
+                copiesTextView.text = copies
             },
             { error ->
                 Log.e("BookDetailFragment", "Error fetching book details: ${error.message}")
@@ -89,7 +96,7 @@ class BookDetailFragment : Fragment() {
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.POST, url, jsonObject,
             { response ->
-                Toast.makeText(requireContext(), "Book rented successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Wypożyczono książkę!", Toast.LENGTH_SHORT).show()
                 copiesTextView.text = (copiesTextView.text.toString().toInt() - 1).toString()
             },
             { error ->

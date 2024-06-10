@@ -87,7 +87,7 @@ class CatalogFragment : Fragment() {
         val sortedBooks = when (criteria) {
             0 -> booksAdapter.books.sortedBy { it.tytul }
             1 -> booksAdapter.books.sortedBy { it.kategoria }
-            2 -> booksAdapter.books.sortedBy { it.rok_wydania }
+            2 -> booksAdapter.books.sortedBy { it.autor }
             else -> booksAdapter.books
         }
         booksAdapter.updateBooks(sortedBooks)

@@ -7,68 +7,101 @@
     tools:context=".BookDetailFragment">
 
     <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/copiesTextView"
+        android:layout_width="152dp"
+        android:layout_height="33dp"
+        android:text="Available Copies"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
 
     <TextView
         android:id="@+id/authorTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="60dp"
         android:text="Author"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
-
-    <TextView
-        android:id="@+id/categoryTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Category"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/authorTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:id="@+id/yearTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
         android:text="Year"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTextView"
+        app:layout_constraintVertical_bias="0.044" />
+
 
     <TextView
-        android:id="@+id/copiesTextView"
+        android:id="@+id/TextView"
+        android:layout_width="204dp"
+        android:layout_height="34dp"
+        android:text="Ilość dostępnych kopii:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/copiesTextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <TextView
+        android:id="@+id/categoryTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Available Copies"
+        android:layout_margin="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Category"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorTextView"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
 
     <Button
         android:id="@+id/rentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rent"
-        app:layout_constraintTop_toBottomOf="@+id/copiesTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Wypożycz"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copiesTextView"
+        app:layout_constraintVertical_bias="0.152" />
 </androidx.constraintlayout.widget.ConstraintLayout>

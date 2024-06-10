@@ -27,10 +27,15 @@ class BooksAdapter(internal var books: List<Book>, private val clickListener: (B
     class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         private val authorTextView: TextView = itemView.findViewById(R.id.authorTextView)
+        private val CatTextView: TextView = itemView.findViewById(R.id.categTextView)
+
 
         fun bind(book: Book, clickListener: (Book) -> Unit) {
+            val aut=book.autor
+            val kat=book.kategoria
             titleTextView.text = book.tytul
-            authorTextView.text = book.autor
+            authorTextView.text = "Autor: $aut"
+            CatTextView.text= "Kategoria: $kat"
             itemView.setOnClickListener { clickListener(book) }
         }
     }
