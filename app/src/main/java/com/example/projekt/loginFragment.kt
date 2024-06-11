@@ -10,11 +10,22 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import java.security.MessageDigest
+
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+
+
+fun hash(password: String): String {
+    val bytes = password.toByteArray()
+    val md = MessageDigest.getInstance("SHA-256")
+    val digest = md.digest(bytes)
+    return digest.fold("") { str, it -> str + "%02x".format(it) }
+}
+
 
 class loginFragment : Fragment() {
 
@@ -35,17 +46,20 @@ class loginFragment : Fragment() {
         loginButton.setOnClickListener {
             val email = view.findViewById<EditText>(R.id.textView2).text.toString()
             val haslo = view.findViewById<EditText>(R.id.textView3).text.toString()
-            loginUser(email, haslo)
+            val hashedPassword = hash(haslo)
+
+            loginUser(email, hashedPassword)
         }
         return view
     }
 
 
-    private fun loginUser(email: String, haslo: String) {
+    private fun loginUser(email: String, hashPass: String) {
         val url = "http://10.0.2.2:5000/login"
         val jsonBody = JSONObject().apply {
             put("email", email)
-            put("haslo", haslo)
+            put("haslo", hashPass)
+            println(hashPass)
         }
 
         val jsonObjectRequest = JsonObjectRequest(

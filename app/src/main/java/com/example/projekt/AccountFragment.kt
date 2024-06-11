@@ -70,7 +70,7 @@ class AccountFragment : Fragment() {
         val imie = response.optString("imie", "Unknown")
         val nazwisko = response.optString("nazwisko", "Unknown")
         val email = response.optString("email", "Unknown")
-        val stanKonta = response.optInt("stan_konta", 0)
+        val stanKonta = response.optInt("stan_konta", -1)
 
         nameTextView.text = "Imię: $imie"
         surnameTextView.text = "Nazwisko: $nazwisko"

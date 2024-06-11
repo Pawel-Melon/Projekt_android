@@ -10,11 +10,15 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import java.security.MessageDigest
+
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+
+
 
 class registerFragment : Fragment() {
 
@@ -37,7 +41,8 @@ class registerFragment : Fragment() {
             val haslo = view.findViewById<EditText>(R.id.editText).text.toString()
             val imie = view.findViewById<EditText>(R.id.editText2).text.toString()
             val nazwisko = view.findViewById<EditText>(R.id.editText3).text.toString()
-            registerUser(imie, nazwisko, email, haslo)
+            val hashPass = hash(haslo)
+            registerUser(imie, nazwisko, email, hashPass)
         }
 
         return view

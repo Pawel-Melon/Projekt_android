@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -115,12 +116,17 @@ class BookDetailFragment : Fragment() {
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.POST, url, jsonObject,
             { response ->
+                val message = response.getString("message")
+                if (message == "Brak srodkow!") {
+                    Toast.makeText(context, "Brak środków na koncie!", Toast.LENGTH_SHORT).show()
+                } else {
+
                 Toast.makeText(requireContext(), "Wypożyczono książkę!", Toast.LENGTH_SHORT).show()
-                copiesTextView.text = (copiesTextView.text.toString().toInt() - 1).toString()
+                copiesTextView.text = (copiesTextView.text.toString().toInt() - 1).toString()}
             },
             { error ->
                 Log.e("BookDetailFragment", "Error renting book: ${error.message}")
-                Toast.makeText(requireContext(), "Failed to rent book!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Brak dostępnych egzemplarzy!", Toast.LENGTH_SHORT).show()
             }
         )
         queue.add(jsonObjectRequest)
