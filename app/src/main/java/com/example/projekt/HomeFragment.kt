@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
         val button = view.findViewById<Button>(R.id.mapButton)
         val accountButton = view.findViewById<Button>(R.id.accountButton)
         val catalogbutton = view.findViewById<Button>(R.id.catalogueButton)
+        val moneyButton = view.findViewById<Button>(R.id.moneyButton)
         button.setOnClickListener {
             findNavController().navigate(R.id.action_afterLoginFragment_to_mapFragment)
         }
@@ -43,6 +44,9 @@ class HomeFragment : Fragment() {
         }
         catalogbutton.setOnClickListener {
             findNavController().navigate(R.id.action_afterLoginFragment_to_catalogFragment)
+        }
+        moneyButton.setOnClickListener {
+            findNavController().navigate(R.id.action_afterLoginFragment_to_moneyFragment)
         }
         welcomeTextView = view.findViewById(R.id.textView)
         val email = UserSession.email

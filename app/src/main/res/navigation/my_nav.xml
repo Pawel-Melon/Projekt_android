@@ -63,6 +63,9 @@
         <action
             android:id="@+id/action_afterLoginFragment_to_catalogFragment"
             app:destination="@id/catalogFragment" />
+        <action
+            android:id="@+id/action_afterLoginFragment_to_moneyFragment"
+            app:destination="@id/moneyFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -98,5 +101,14 @@
         <action
             android:id="@+id/action_bookDetailFragment_to_catalogFragment"
             app:destination="@id/catalogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyFragment"
+        android:name="com.example.projekt.MoneyFragment"
+        android:label="Doładuj konto"
+        tools:layout="@layout/fragment_money">
+        <action
+            android:id="@+id/action_moneyFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
     </fragment>
 </navigation>
