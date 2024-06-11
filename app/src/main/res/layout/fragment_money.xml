@@ -8,33 +8,48 @@
 
     <TextView
         android:id="@+id/topUpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="43dp"
         android:text="Doładuj konto"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/ImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/topUpEditText" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="254dp"
+        android:layout_height="207dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/paypal"
+        app:layout_constraintBottom_toTopOf="@+id/topUpEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/topUpEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Wprowadź kwotę"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:hint="Wprowadź kwotę w PLN"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/topUpTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/topUpButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/topUpButton" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/topUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doładuj"
-        app:layout_constraintTop_toBottomOf="@id/topUpEditText"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="174dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#0080FF"
+        android:text="Przejdź do PayPal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
