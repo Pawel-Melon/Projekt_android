@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -99,9 +100,11 @@ class AccountFragment : Fragment() {
         for (i in 0 until response.length()) {
             val rental = response.getJSONObject(i)
             val rentalView = TextView(requireContext()).apply {
-                text = "Książka: ${rental.optString("tytul")} | Data wypożyczenia: ${rental.optString("data_wypozyczenia")} | Data zwrotu:${rental.optString("data_zwrotu")}"
-                textSize = 18f
+                text = "Książka: ${rental.optString("tytul")} \n Data wypożyczenia: ${rental.optString("data_wypozyczenia")} \n Data zwrotu:${rental.optString("data_zwrotu")}\n"
+                textSize = 20f
+
             }
+            rentalView.setTextColor(ContextCompat.getColor(this.requireContext(), R.color.white))
             rentalsContainer.addView(rentalView)
         }
     }

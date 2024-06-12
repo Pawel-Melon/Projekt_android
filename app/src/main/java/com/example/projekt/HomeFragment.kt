@@ -68,8 +68,8 @@ class HomeFragment : Fragment() {
             Request.Method.GET, url, null,
             { response ->
                 val imie = response.optString("imie", "Unknown")
-                val u_id = response.optInt("id_uzytkownika", 7)
-                UserSession.uid = u_id
+                val u_id = response.optString("id", "1")
+                UserSession.uid = u_id.toInt()
                 welcomeTextView.text = "Witaj, $imie!"
             },
             { error ->

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356977924360",
+    "project_id": "apka-tuim",
+    "storage_bucket": "apka-tuim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356977924360:android:b0a8aa7d1b13117b3c74bd",
+        "android_client_info": {
+          "package_name": "com.example.projekt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj6ShfxPdFiYrGIEMTapOfXdMiZTiARv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

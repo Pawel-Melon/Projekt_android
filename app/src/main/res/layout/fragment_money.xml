@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient"
     android:layout_height="match_parent"
     tools:context=".MoneyFragment">
 
     <TextView
         android:id="@+id/topUpTextView"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_width="169dp"
         android:layout_height="43dp"
         android:text="Doładuj konto"
@@ -36,7 +39,9 @@
         android:layout_height="40dp"
         android:layout_marginBottom="40dp"
         android:hint="Wprowadź kwotę w PLN"
+        android:textColorHint="@color/white"
         android:inputType="numberDecimal"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/topUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -44,11 +49,13 @@
 
     <Button
         android:id="@+id/topUpButton"
-        android:layout_width="174dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="223dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="164dp"
         android:backgroundTint="#0080FF"
         android:text="Przejdź do PayPal"
+        android:textSize="19dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

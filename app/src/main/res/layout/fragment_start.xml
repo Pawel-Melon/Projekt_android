@@ -4,21 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".StartFragment">
 
+
+    <ImageView
+        android:id="@+id/exampleImageView"
+        android:layout_width="254dp"
+        android:layout_height="207dp"
+        android:src="@drawable/bookstore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
 
     <TextView
         android:id="@+id/WelcmetextView"
         android:layout_width="393dp"
         android:layout_height="122dp"
         android:text="            Witaj w\nwypożyczalni książek"
+        android:textColor="@color/white"
         android:textSize="40dp"
+        android:textStyle="bold|normal"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
         android:id="@+id/textView"
@@ -31,43 +45,32 @@
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997" />
-
-    <ImageView
-        android:id="@+id/exampleImageView"
-        android:layout_width="254dp"
-        android:layout_height="207dp"
-        android:src="@drawable/bookstore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.417" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="158dp"
-        android:layout_height="67dp"
-        android:backgroundTint="@color/darkred"
-        android:text="Zaloguj"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.892" />
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="163dp"
-        android:layout_height="69dp"
+        android:layout_width="185dp"
+        android:layout_height="66dp"
         android:backgroundTint="@color/darkred"
         android:text="Zarejestruj się"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.087" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="183dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Zaloguj"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

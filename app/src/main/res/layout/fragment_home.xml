@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".HomeFragment">
 
 
@@ -12,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Witaj"
+        android:textColor="@color/white"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/accountButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,15 +24,15 @@
 
     <Button
         android:id="@+id/mapButton"
-        android:layout_width="218dp"
-        android:layout_height="78dp"
+        android:layout_width="223dp"
+        android:layout_height="81dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/darkred"
         android:text="Mapa"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/catalogueButton"
         app:layout_constraintVertical_bias="0.0" />
@@ -45,36 +47,35 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/catalogueButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <Button
         android:id="@+id/catalogueButton"
         android:layout_width="223dp"
         android:layout_height="75dp"
+        android:layout_marginTop="328dp"
         android:backgroundTint="@color/darkred"
         android:text="Katalog"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/moneyButton"
-        android:layout_width="218dp"
-        android:layout_height="78dp"
+        android:layout_width="222dp"
+        android:layout_height="75dp"
         android:layout_marginTop="46dp"
         android:backgroundTint="@color/darkred"
         android:text="Doładuj konto"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapButton"
         app:layout_constraintVertical_bias="0.0" />
