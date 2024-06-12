@@ -66,7 +66,7 @@ class BookDetailFragment : Fragment() {
     }
 
     private fun fetchBookDetails(bookId: Int) {
-        val url = "http://10.0.2.2:5000/book/$bookId"
+        val url = "http://192.168.1.17:5000/book/$bookId"
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
@@ -107,7 +107,7 @@ class BookDetailFragment : Fragment() {
     }
 
     private fun rentBook(bookId: Int) {
-        val url = "http://10.0.2.2:5000/rentals"
+        val url = "http://192.168.1.17:5000/rentals"
         val jsonObject = JSONObject()
         jsonObject.put("id_ksiazki", bookId)
         jsonObject.put("id_uzytkownika", UserSession.uid)

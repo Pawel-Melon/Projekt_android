@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
 
 
     private fun fetchUserData(email: String) {
-        val url = "http://10.0.2.2:5000/users/$email"
+        val url = "http://192.168.1.17:5000/users/$email"
 
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
