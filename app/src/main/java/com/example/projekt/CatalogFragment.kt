@@ -57,7 +57,7 @@ class CatalogFragment : Fragment() {
 
 
     private fun fetchBooks() {
-        val url = "http://10.0.2.2:5000/books"
+        val url = "http://192.168.1.17:5000/books"
         val jsonArrayRequest = JsonArrayRequest(
             Request.Method.GET, url, null,
             { response ->

@@ -55,7 +55,7 @@ class loginFragment : Fragment() {
 
 
     private fun loginUser(email: String, hashPass: String) {
-        val url = "http://10.0.2.2:5000/login"
+        val url = "http://192.168.1.17:5000/login"
         val jsonBody = JSONObject().apply {
             put("email", email)
             put("haslo", hashPass)

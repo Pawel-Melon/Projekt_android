@@ -49,7 +49,7 @@ class StartFragment : Fragment() {
         }
 
         val welcometext = view.findViewById<TextView>(R.id.textView)
-        val url = "http://10.0.2.2:5000/users/test"
+        val url = "http://192.168.1.17:5000/users/test"
 
 
         //fetchUserData()

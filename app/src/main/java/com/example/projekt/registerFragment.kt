@@ -49,7 +49,7 @@ class registerFragment : Fragment() {
     }
 
     private fun registerUser(imie: String, nazwisko: String, email: String, haslo: String) {
-        val url = "http://10.0.2.2:5000/register"
+        val url = "http://192.168.1.17:5000/register"
         val jsonBody = JSONObject().apply {
             put("imie", imie)
             put("nazwisko", nazwisko)

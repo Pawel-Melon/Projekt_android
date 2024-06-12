@@ -49,7 +49,7 @@ class MoneyFragment : Fragment() {
     }
 
     private fun initiatePayPalPayment(amount: Double) {
-        val url = "http://10.0.2.2:5000/paypal/topup"
+        val url = "http://192.168.1.17:5000/paypal/topup"
         val jsonBody = JSONObject().apply {
             put("amount", amount)
             put("user_id", UserSession.uid)
